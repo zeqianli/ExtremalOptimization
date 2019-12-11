@@ -110,6 +110,7 @@ class UndirectedGraph(Graph):
         edges: ndarray(n, 2), directional edges; Each entry must be in [0,n_node).
         """
 
+        # This class in unfinished.
         raise NotImplementedError
         Graph.__init__(self,n_node,edges)
         
@@ -124,7 +125,6 @@ class UndirectedGraph(Graph):
         self.max_degree=np.max(self.degrees)
 
         self.n_scc, self.scc_ind = sp.csgraph.connected_components(self.adjacency_matrix, directed=False, connection='strong',return_labels=True)  # scc is indexed automatically by its feed-foward order
-
         pass
 
 def load_graph_from_file(filename):

@@ -68,6 +68,7 @@ class HeuristicProblem:
 
         raise NotImplementedError
 
+
 class MinimumFeedbackArc(HeuristicProblem):
     """ Minimum feedback arc problem.
     
@@ -242,7 +243,6 @@ class MinimumFeedbackArc(HeuristicProblem):
             levels[children]=np.maximum(levels[children],levels[node]+1)
         
         return levels
-            
 
 
 class CPDecomposition(HeuristicProblem):
